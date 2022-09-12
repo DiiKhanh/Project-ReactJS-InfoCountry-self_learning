@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Project-ReactJS-InfoCountry-self_learning/static/css/main.85a549f1.css",
+    "main.js": "/Project-ReactJS-InfoCountry-self_learning/static/js/main.d6bb2072.js",
+    "index.html": "/Project-ReactJS-InfoCountry-self_learning/index.html",
+    "main.85a549f1.css.map": "/Project-ReactJS-InfoCountry-self_learning/static/css/main.85a549f1.css.map",
+    "main.d6bb2072.js.map": "/Project-ReactJS-InfoCountry-self_learning/static/js/main.d6bb2072.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85a549f1.css",
+    "static/js/main.d6bb2072.js"
+  ]
+}
