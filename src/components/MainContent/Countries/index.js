@@ -2,9 +2,9 @@ import styled from "styled-components";
 import Country from "./Country";
 import {
   getCountries,
-  getCountriesByName,
   getCountriesByRegion,
-} from "../../Store/Actions/countriesActions";
+  getCountriesByName,
+} from "../../../store/CountriesSlice/CountriesSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import ScrollBar from "react-perfect-scrollbar";
@@ -13,8 +13,7 @@ import Loading from "../../Loading/Loading";
 
 function Countries() {
   const dispatch = useDispatch();
-  const countries = useSelector((state) => state.Countries.countries);
-  const loading = useSelector((state) => state.Countries.loading);
+  const { countries, loading } = useSelector((state) => state.Countries);
   const slug = useParams();
   useEffect(() => {
     if (slug.regionName) {

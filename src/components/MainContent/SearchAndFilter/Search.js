@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { MdSearch } from "react-icons/md";
+import { useDispatch } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 import styled from "styled-components";
+
 
 function Search() {
   const [searchValue, setSearchValue] = useState("");
@@ -11,6 +13,7 @@ function Search() {
       searchValue !== "" ? navigate(`/search/${searchValue}`) : navigate("/");
     }
   };
+
   return (
     <SearchPane>
       <h3>Search Country:</h3>

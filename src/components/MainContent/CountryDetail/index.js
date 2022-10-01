@@ -4,7 +4,7 @@ import { useContext, useEffect } from "react";
 import CountryInfo from "./CountryInfo.js";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getCountryByName } from "../../Store/Actions/countriesActions.js";
+import { getCountryByName } from "../../../store/CountriesSlice/CountriesSlice";
 import Loading from "../../Loading/Loading";
 
 function CountryDetail() {
@@ -12,8 +12,7 @@ function CountryDetail() {
   const slug = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const country = useSelector((state) => state.Countries.country);
-  const loading = useSelector((state) => state.Countries.loading);
+  const {country, loading} = useSelector((state) => state.Countries)
   useEffect(() => {
     dispatch(getCountryByName(slug.countryName));
   }, [slug.countryName, dispatch]);

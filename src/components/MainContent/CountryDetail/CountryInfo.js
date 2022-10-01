@@ -24,14 +24,14 @@ const getAltSpellings = (country) => {
 };
 
 const getBorderCountry = async (code) => {
-  const resul = await axios.get(
+  const res = await axios.get(
     `https://restcountries.com/v2/alpha?codes=${code}`
   );
-  return resul.data;
+  return res.data;
 };
 
 function CountryInfo() {
-  const country = useSelector((state) => state.Countries.country);
+  const {country} = useSelector((state) => state.Countries);
   const [countryBorder, setCountryBorder] = useState([]);
   useEffect(() => {
     if (country && country.borders) {
